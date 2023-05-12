@@ -1,0 +1,16 @@
+create table cliente (
+	id int not null primary key,
+	cpf char(11) not null,
+	numero_conta int not null,
+	telefone char(9) null,
+	cidade char(20) null
+);
+
+create table carro (
+	id int not null primary key,
+	chassi char(17) not null,
+	modelo varchar(15) not null,
+	cor varchar(15) not null,
+	ano int not null,
+	valor numeric(10, 3)
+);
