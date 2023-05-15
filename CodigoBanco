@@ -93,3 +93,9 @@ values
 (4, '2L4NbAMrZddCA1692', 'uno', 'Verde', 2001),
 (5, '522ju7tn3CwA41672', 'astra', 'Prata', 2005),
 (6, '87P4t1KAhKh0z6577', 'gol', 'Prata', 2005);
+
+-----------------11 | INSERCAO ALUGUEL---------------------------------------------------
+
+insert into aluguel(cliente_id, carro_id, data_entrada, data_saida, total, id)
+values(1, 1, '21/07/2022', '08/05/2022', 1, 1);
+
