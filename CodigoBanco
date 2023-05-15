@@ -72,13 +72,13 @@ insert into cliente (id, cpf, nome, numero_conta, telefone, cidade)
 values(2, '81044016884', 'fábio', 1711, '556143136', 'jundiaí');
 
 insert into cliente (id, cpf, nome, numero_conta, telefone, cidade)
-values(3, '81044016884', 'fábio', 1711, '556143136', 'jundiaí');
+values(3, '23051353868', 'maria', 7121, '319003817', 'são paulo');
 
 insert into cliente (id, cpf, nome, numero_conta, telefone, cidade)
 values(4, '80348144822', 'flávio', 2211, '877806249', 'campinas');
 
 insert into cliente (id, cpf, nome, numero_conta, telefone, cidade)
-values(5, '73259017712', 'fernndo', 1123, '751729316', 'rio de janeiro');
+values(5, '73259017712', 'fernando', 1123, '751729316', 'rio de janeiro');
 
 insert into cliente (id, cpf, nome, numero_conta, telefone, cidade)
 values(6, '48073859688', 'marta', 3211, '795527302', 'belo horizonte');
@@ -93,4 +93,3 @@ values
 (4, '2L4NbAMrZddCA1692', 'uno', 'Verde', 2001),
 (5, '522ju7tn3CwA41672', 'astra', 'Prata', 2005),
 (6, '87P4t1KAhKh0z6577', 'gol', 'Prata', 2005);
-
