@@ -25,6 +25,7 @@ create table aluguel(
 	total numeric(10, 3)
 );
 alter table aluguel add column id int;
+
 -----------------2 | Not Null--------------------------------------------
 alter table cliente alter column id set not null
 alter table cliente alter column cpf set not null
@@ -55,11 +56,11 @@ alter table cliente add constraint cpfUnico unique(cpf);
 -----------------5 | UNIQUE NUMERO----------------------------------------------
 alter table cliente add constraint numero_conta_unica unique(numero_conta);
 -----------------6 | CHECK VALOR POSITIVO---------------------------------------
-alter table aluguel add constraint valorPositivo check (total > 0);
+alter table aluguel add constraint valorPositivo check (total >= 0);
 -----------------7 | UNIQUE CHASSI----------------------------------------------
 alter table carro add constraint chassi_unico unique(chassi);
 -----------------8 | UNIQUE VALOR-----------------------------------------------
-alter table carro add constraint valor_positivo check (valor > 0);
+alter table carro add constraint valor_positivo check (valor >= 0);
 
 
 
@@ -95,7 +96,45 @@ values
 (6, '87P4t1KAhKh0z6577', 'gol', 'Prata', 2005);
 
 -----------------11 | INSERCAO ALUGUEL---------------------------------------------------
+--                       1          2           3			4         5    6
+-- ano/mes/dia
+insert into aluguel(cliente_id, carro_id, data_entrada, data_saida, total, id)
+values(1, 1, '2022-07-21', '2022-08-05', 0, 1);
+
+insert into aluguel(cliente_id, carro_id, data_entrada, total, id)
+values(2, 2, '2022-07-21', 0, 2);
 
 insert into aluguel(cliente_id, carro_id, data_entrada, data_saida, total, id)
-values(1, 1, '21/07/2022', '08/05/2022', 1, 1);
+values(2, 3, '2022-07-23', '2022-08-06', 0, 3);  
+
+insert into aluguel(cliente_id, carro_id, data_entrada, total, id)
+values(2, 4, '2006-07-24', 0, 4);  
+
+-----------------12 | Alterar Cliente----------------------------------------------------
+update cliente set telefone = '12345678' where id = 4;
+-----------------13 | Alterar Cliente---------------------------------------------------
+update cliente set nome = 'Gustavo' where nome = 'fábio';
+-----------------14 | Alterar Cliente---------------------------------------------------
+update cliente set cidade = 'brasilia' where numero_conta = 2000
+-----------------15 | Alterar Carro---------------------------------------------------
+update carro set valor = 20000 where valor = 0;
+-----------------16 | Alterar Carro---------------------------------------------------
+update carro set cor = 'azul' where modelo = 'uno' and modelo = 'corsa';
+-----------------17 | Alterar Carro---------------------------------------------------
+update aluguel set 
+-----------------18 | INSERCAO ALUGUEL---------------------------------------------------
+-----------------19 | INSERCAO ALUGUEL---------------------------------------------------
+-----------------20 | INSERCAO ALUGUEL---------------------------------------------------
+-----------------21 | INSERCAO ALUGUEL---------------------------------------------------
+-----------------22 | INSERCAO ALUGUEL---------------------------------------------------
+-----------------23 | INSERCAO ALUGUEL---------------------------------------------------
+-----------------24 | INSERCAO ALUGUEL---------------------------------------------------	  
+-----------------25 | INSERCAO ALUGUEL---------------------------------------------------	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 
