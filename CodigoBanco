@@ -121,20 +121,23 @@ update carro set valor = 20000 where valor = 0;
 -----------------16 | Alterar Carro---------------------------------------------------
 update carro set cor = 'azul' where modelo = 'uno' and modelo = 'corsa';
 -----------------17 | Alterar Carro---------------------------------------------------
-update aluguel set 
------------------18 | INSERCAO ALUGUEL---------------------------------------------------
------------------19 | INSERCAO ALUGUEL---------------------------------------------------
------------------20 | INSERCAO ALUGUEL---------------------------------------------------
------------------21 | INSERCAO ALUGUEL---------------------------------------------------
------------------22 | INSERCAO ALUGUEL---------------------------------------------------
------------------23 | INSERCAO ALUGUEL---------------------------------------------------
------------------24 | INSERCAO ALUGUEL---------------------------------------------------	  
------------------25 | INSERCAO ALUGUEL---------------------------------------------------	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
+update aluguel set data_saida = null;
+-----------------18 | Excluir Cliente---------------------------------------------------
+delete from cliente where cidade = 'campinas';
+-----------------19 | Excluir Carro---------------------------------------------------
+delete from carro where ano = 2003 and ano = 2004;
+-----------------20 | Excluir Carro---------------------------------------------------
+delete from carro where chassi = '4AHgN2McAFAvD5971';
+-----------------21 | Excluir Carro---------------------------------------------------
+delete from carro where modelo = 'gol' and cor = 'prata';
+-----------------22 | Alterar Carro---------------------------------------------------
+update carro set valor = 2000 where modelo = 'gol';
+update carro set valor = 2000 where modelo = 'astra';
+update carro set valor = 2000 where modelo = 'uno';
+-----------------23 | Alterar Carro---------------------------------------------------
+update carro set valor = 1000 where modelo = 'uno';
+update carro set valor = 1000 where modelo = 'astra';
+-----------------24 | Excluir Carro---------------------------------------------------	  
+delete from carro where valor < 2000;
+-----------------25 | Excluir Carro---------------------------------------------------	  
+delete from aluguel;
